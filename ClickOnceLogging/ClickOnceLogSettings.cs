@@ -65,8 +65,10 @@ namespace ClickOnceLogging
             //Open the Deployment sub-key.
             RegistryKey rk = Registry.CurrentUser.OpenSubKey(ClickOnceLoggingSubKeyName, true);
             //Set the values associated with that sub-key.
-            if (this.VerboseLogging)
+            if (VerboseLogging)
+            {
                 rk.SetValue(rkName_LogVerbosityLevel, "1");
+            }
             else
             {
                 //check to make sure the [value] exists before trying to delete it 
@@ -77,7 +79,7 @@ namespace ClickOnceLogging
                 }
             }
 
-            if (this.LogFileLocation.Length == 0)
+            if (String.IsNullOrEmpty(LogFileLocation))
             {
                 //check to make sure the [value] exists before trying to delete it 
                 //Note: If you set the values to string.Empty instead of deleting it,
@@ -88,8 +90,8 @@ namespace ClickOnceLogging
             }
             else
             {
-                rk.SetValue(rkName_LogFilePath, this.LogFileLocation);
-                string logFolder = Path.GetDirectoryName(this.LogFileLocation);
+                rk.SetValue(rkName_LogFilePath, LogFileLocation);
+                string logFolder = Path.GetDirectoryName(LogFileLocation);
                 if (!Directory.Exists(logFolder))
                     Directory.CreateDirectory(logFolder);
             }
