@@ -4,6 +4,7 @@ using System.Windows.Forms;
 
 namespace ClickOnceLogging
 {
+    // https://robindotnet.wordpress.com/2010/05/31/enhanced-logging-in-clickonce-deployment/
     static class Program
     {
         /// <summary>
@@ -14,7 +15,7 @@ namespace ClickOnceLogging
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FormMain());
         }
     }
 }
