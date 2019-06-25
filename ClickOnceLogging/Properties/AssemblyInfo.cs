@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("ClickOnceLogging")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Verbose logging in ClickOnce deployment")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("S&T CZ s.r.o.")]
 [assembly: AssemblyProduct("ClickOnceLogging")]
-[assembly: AssemblyCopyright("Copyright ©  2019")]
+[assembly: AssemblyCopyright("Copyright © S&T CZ 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
